@@ -4,6 +4,7 @@ var tableSize = 3;
 var not = 'nothing.jpg';
 var size100 = '100px';
 var noth = '<img src=' + not + ' width=' + size100 + ' height=' + size100 + '>';
+var textP1 = "<h2>Player One turn</h2>";
 console.log("noth.value")
 
 function creatTable() {
@@ -27,6 +28,7 @@ function ofNothing() {
             mat[r][c] = noth;
         }
     }
+    document.getElementById("textInfo").innerHTML = textP1;
 }
 
 ofNothing()

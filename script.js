@@ -5,7 +5,15 @@ var not = 'nothing.jpg';
 var size100 = '100px';
 var noth = '<img src=' + not + ' width=' + size100 + ' height=' + size100 + '>';
 var textP1 = "<h2>Player One turn</h2>";
-console.log("noth.value")
+var turn = false;
+
+function play() {
+    let rows = document.getElementById("input1").value
+    let cols = document.getElementById("input2").value
+        turn = !turn;
+        mat[rows - 1][cols - 1] = turn;
+    creatTable()
+}
 
 function creatTable() {
     table = '<table border=1>';
@@ -18,7 +26,6 @@ function creatTable() {
     table += '</table>';
     document.getElementById("display").innerHTML = table;
     document.getElementById("display").style.marginLeft = '35%';
-    console.log(table);
 }
 
 function ofNothing() {

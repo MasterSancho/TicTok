@@ -5,13 +5,16 @@ var not = 'nothing.jpg';
 var size100 = '100px';
 var noth = '<img src=' + not + ' width=' + size100 + ' height=' + size100 + '>';
 var textP1 = "<h2>Player One turn</h2>";
+var textP2 = "<h2>Player Two turn</h2>";
 var turn = false;
+var info = document.getElementById("textInfo");
 
 function play() {
     let rows = document.getElementById("input1").value
     let cols = document.getElementById("input2").value
         turn = !turn;
         mat[rows - 1][cols - 1] = turn;
+    document.getElementById("textInfo").innerHTML = turn ? textP2 : textP1;
     creatTable()
 }
 

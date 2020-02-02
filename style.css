@@ -2,3 +2,7 @@ body {
     background-color: brown;
     text-align: center;
 }
+
+input {
+    width: 40px;
+}

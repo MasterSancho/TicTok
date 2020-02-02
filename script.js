@@ -12,16 +12,16 @@ var textP1 = "<h2>Player One turn</h2>";
 var textP2 = "<h2>Player Two turn</h2>";
 var turn = false;
 var info = document.getElementById("textInfo");
+var textWrongSquare = "<h2>Choice empty square please</h2>";
 
 function play() {
     let rows = document.getElementById("input1").value
     let cols = document.getElementById("input2").value
-        turn = !turn;
-    mat[rows - 1][cols - 1] = turn ? x : o;
-    document.getElementById("textInfo").innerHTML = turn ? textP2 : textP1;
-    creatTable()
+    turn = !turn;
+        mat[rows - 1][cols - 1] = turn ? x : o;
+        document.getElementById("textInfo").innerHTML = turn ? textP2 : textP1;
+        creatTable()
 }
-
 function creatTable() {
     table = '<table border=1>';
     for (let r = 0; r < tableSize; r++) {

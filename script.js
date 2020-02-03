@@ -25,6 +25,7 @@ function play() {
         mat[rows - 1][cols - 1] = turn ? x : o;
         document.getElementById("textInfo").innerHTML = turn ? textP2 : textP1;
         creatTable()
+        winCheack()
     } else {
         document.getElementById("textInfo").innerHTML = textWrongSquare;
     } if (stepCount == 9) {
@@ -52,6 +53,20 @@ function ofNothing() {
     }
     document.getElementById("textInfo").innerHTML = textP1;
 }
+
+// function winCheack() {
+//     var rowWinCunt = 0;
+//     var colWinCunt = 0;
+//     let xOro = x;
+//     let win = false;
+//     for (let r = 0; r < tableSize; r++) {
+//         for (let c = 0; c < tableSize; c++) {
+//             mat[r][c] == xOro ? rowWinCunt++ : rowWinCunt;
+//             if (mat[c][r] = xOro) colWinCunt++;
+//         }
+//     }
+//     // (rowWinCunt == 3 || colWinCunt == 3) ? alert("You Win") : win;
+// }
 
 ofNothing()
 creatTable()
